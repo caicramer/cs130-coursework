@@ -63,7 +63,7 @@ header {
   padding: 5px;
   border-radius: 50px;
   padding-left: 15px;
-  padding-right: 15px;
+  padding-right: 20px;
   background-color: #303030;
   opacity: 0.6;
 
@@ -122,10 +122,36 @@ border-radius: 250px;
 
 
 }
+.play-button {
+  opacity: 0;
+  background-color: green;
+  justify-content: flex-end;
+  border-radius: 400px;
+
+}
 
 footer {
     background: #222;
     grid-area: bottom;
+
+}
+nav > a:hover {
+border-bottom: solid 2px green;
+opacity: 100;
+
+}
+aside > a:hover {
+border-left: solid 2px green;
+opacity: 100;
+}
+#upgrade:hover {
+opacity: 100;
+}
+#profile:hover {
+opacity:100;
+}
+.artist-card:hover .play-button {
+opacity: 1;
 }
 
 
@@ -153,30 +179,6 @@ footer {
 }
 aside, #upgrade {
   display: none;
-}
-}
-
-  nav {
-    flex: none;
-  }
-}
-nav > a:hover {
-  border-bottom: solid 2px green;
-  opacity: 100;
-
-}
-aside > a:hover {
-  border-left: solid 2px green;
-  opacity: 100;
-}
-#upgrade:hover {
-  opacity: 100;
-}
-#profile:hover {
-  opacity:100;
-}
-.artist-card:hover {
-
 }
 }
 /***************************/
