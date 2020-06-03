@@ -2,7 +2,7 @@ body {
     font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
     color: #fff;
 }
-a, a:hover, a:visited, a:active { 
+a, a:hover, a:visited, a:active {
     color: #fff;
     text-decoration: none;
 }
@@ -32,12 +32,41 @@ body {
 aside {
     background-color: #000;
     grid-area: left;
+    padding-left: 20px;
+
+}
+
+aside > a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  opacity: 0.6;
 }
 header {
     background: #111;
-    position: fixed;
+    flex-direction: row;
     width: calc(100vw - 250px);
-    left: 250px;
+    justify-content: flex-end;
+    padding-top: 20px;
+    text-transform: uppercase;
+
+}
+#upgrade {
+  border: solid 1px #CCC;
+  padding: 5px;
+  border-radius: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+  opacity: 0.6;
+}
+#profile {
+  border: solid 1px #303030;
+  padding: 5px;
+  border-radius: 50px;
+  padding-left: 15px;
+  padding-right: 20px;
+  background-color: #303030;
+  opacity: 0.6;
+
 }
 
 main {
@@ -51,13 +80,112 @@ main {
 
 nav {
     margin-top: 100px;
+    display: inline-block;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    opacity: 0.6;
+}
+nav > a {
+  padding: 10px;
+
+}
+
+#featured-content img {
+width: 100%;
+border-radius: 250px;
+
+}
+
+
+.artist-card {
+  width: 18%;
+  border-radius: 20px;
+  display: flex;
+  background-color: #303030;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#featured-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+.artist-card div {
+  height: 100%;
+  padding: 20px;
+}
+.artist-card h3, p {
+  align-items: left;
+
+
+}
+.play-button {
+  opacity: 0;
+  background-color: green;
+  justify-content: center;
+  border-radius: 200px;
+  width: 50px;
+  height: 50px;
+  display:flex;
+  align-items: center;
+  float:right; 
+
 }
 
 footer {
     background: #222;
     grid-area: bottom;
+
+}
+nav > a:hover {
+border-bottom: solid 2px green;
+opacity: 100;
+
+}
+aside > a:hover {
+border-left: solid 2px green;
+opacity: 100;
+}
+#upgrade:hover {
+opacity: 100;
+}
+#profile:hover {
+opacity:100;
+}
+.artist-card:hover .play-button {
+opacity: 1;
 }
 
+
+@media screen and (max-width: 1000px) {
+  .artist-card {
+    width: 32%
+
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .artist-card {
+    width: 45%;
+    height: auto;
+  }
+  body {
+  overflow: hidden;
+  margin: 0px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas:
+     "main"
+     "bottom";
+  height: 100vh;
+}
+aside, #upgrade {
+  display: none;
+}
+}
 /***************************/
 /* Accessories & Florishes */
 /***************************/
