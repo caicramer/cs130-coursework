@@ -29,16 +29,20 @@ body {
   grid-area: logo;
 }
 #searchbar {
-  display: grid;
+  display: flex;
   grid-area: search;
-  outline: 2px dotted gray;
+  justify-content: flex-end;
 
   }
-  }
+#searchbar a {
+  font-size: 2em;
+  margin-left: 30px;
+  margin-top: 10px;
+
+}
 main {
     grid-area: article;
     padding: 10px;
-    outline: 2px dotted gray;
     margin: 0 auto;
     text-align: center;
     background-color: white;
@@ -60,32 +64,64 @@ h2 {
     text-align: center;
     font-weight: 400;
     font-style: normal;
+    color: black;
+    padding: 5px;
+    font-size: 75px;
+    margin-bottom: 0px;
+
+  }
+  .PurpleWord {
+    font-family: gothic-open-shaded, sans-serif;
+    text-align: center;
+    font-weight: 200;
+    font-style: normal;
+    color: #c47fff;
+    padding: 5px;
+    font-size: 40px;
+
+  }
+  .OrangeWord {
+    font-family: gothic-open-shaded, sans-serif;
+    text-align: center;
+    font-weight: 200;
+    font-style: normal;
     color: #ee6e00;
+    padding: 5px;
+    font-size: 40px;
+
+  }
+  .GreenWord {
+    font-family: gothic-open-shaded, sans-serif;
+    text-align: center;
+    font-weight: 200;
+    font-style: normal;
+    color: #38e27c;
     padding: 5px;
     font-size: 40px;
 
   }
 #glossery {
   display: flex;
-  outline: 2px dotted gray;
-  background-color: white;
   border-radius: 25px;
   padding: 20px;
 
 }
 .grid-container {
 display: grid;
-grid-row-gap: 20px;
+grid-row-gap: 30px;
 grid-template-columns: auto auto auto;
 padding: 10px;
+justify-content: center;
 }
 
 .grid-item {
-background-color: rgba(255, 255, 255, 0.8);
-border: 1px solid rgba(0, 0, 0, 0.8);
+background-color: white;
+
+box-shadow: 5px 10px gray;
 padding: 20px;
 font-size: 20px;
 text-align: center;
+margin-left: 20px;
 }
 
 #states {
@@ -96,11 +132,12 @@ text-align: center;
 
 }
 #states .card {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: solid 1px black;
+  width: 100%;
+  margin-top: 30px;
+
 
 }
 #states img {
@@ -113,4 +150,14 @@ text-align: center;
 
 .selected {
   color: white;
+  font-size: 100px;
+}
+
+.caption {
+  font-size: 50px;
+  text-decoration: none;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0px;
+
 }
